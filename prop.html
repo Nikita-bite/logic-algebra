@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Алгебра логики</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script>
+        function visible(){
+            document.getElementById('arrow-right').style.visibility = 'visible';
+            document.getElementById('arrow-left').style.visibility = 'visible';
+        }
+    </script>
+</head>
+<body onload="visible()">
+<div class="sidebar">
+    <h1>Алгебра логики</h1><br><br>
+    <h2><a href="index.html">Что это?</a></h2><br>
+    <h2><a href="history.html">История возникновения</a></h2><br>
+    <h2><a href="logic_operations.html">Логические операции</a></h2><br>
+    <h2 style="color: #FFFEBF">Свойства</h2><br>
+</div>
+<div class="main">
+    <a style='font-size:72px' class='fas arrow left' id="arrow-left" href="logic_operations.html"><img class='left' src="/img/left.png" alt="левая стрелочка на предыдущую страницу"></a>
+    <div class="content">
+        <h3>Свойства</h3>
+        <h4>Аксиомы</h4>
+        <ol>
+            <li><p style="text-decoration-line: overline; text-decoration-style: double; display:inline-block;  margin-bottom: 0.8vh; margin-top: 0.8vh">A</p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh"> = A</p></li>
+            <li><p style="display:inline-block;  margin-bottom: 0.8vh; margin-top: 0.8vh">A V </p><p style="text-decoration-line: overline; display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A</p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh"> = 1</p></li>
+            <li><p style="display:inline-block;  margin-bottom: 0.8vh; margin-top: 0.8vh">A V </p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">1</p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh"> = 1</p></li>
+            <li><p style="display:inline-block;  margin-bottom: 0.8vh; margin-top: 0.8vh">A V </p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A</p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh"> = A</p></li>
+            <li><p style="display:inline-block;  margin-bottom: 0.8vh; margin-top: 0.8vh">A V </p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">0</p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh"> = A</p></li>
+            <li><p style="display:inline-block;  margin-bottom: 0.8vh; margin-top: 0.8vh">A Λ </p><p style="text-decoration-line: overline; display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A</p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh"> = 0</p></li>
+            <li><p style="display:inline-block;  margin-bottom: 0.8vh; margin-top: 0.8vh">A Λ </p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A</p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh"> = A</p></li>
+            <li><p style="display:inline-block;  margin-bottom: 0.8vh; margin-top: 0.8vh">A Λ </p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">0</p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh"> = 0</p></li>
+            <li><p style="display:inline-block;  margin-bottom: 0.8vh; margin-top: 0.8vh">A Λ </p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">1</p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh"> = 1</p></li>
+        </ol>
+        <br><br>
+        <h4>Свойства</h4>
+        <ol>
+            <li>
+                <p>Коммутативность:</p>
+                <p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A V B = B V A</p></p>
+                <p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A Λ B = B Λ A</p></p>
+            </li>
+            <li>
+                <p>Ассоциативность:</p>
+                <p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A V B V C = B V (A V C)</p></p>
+                <p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A Λ B Λ C = B Λ (A Λ C)</p></p>
+            </li>
+            <li>
+                <p>Дистрибутивность:</p>
+                <p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A Λ (B V C) = A Λ B V A Λ C</p></p>
+                <p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A V (B Λ C) = (A V B) Λ (A V C)</p></p>
+            </li>
+            <li>
+                <p>Законы де Мо́ргана:</p>
+                <p>
+                    <p style="text-decoration-line: overline; display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A Λ B</p>
+                    <p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">=</p>
+                    <p style="text-decoration-line: overline; display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">B</p>
+                    <p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">V</p>
+                    <p style="text-decoration-line: overline; display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A</p>
+                </p>
+                <p>
+                    <p style="text-decoration-line: overline; display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A V B</p>
+                    <p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">=</p>
+                    <p style="text-decoration-line: overline; display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">B</p>
+                    <p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">Λ</p>
+                    <p style="text-decoration-line: overline; display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A</p>
+                </p>
+            </li>
+            <li>
+                <p>Законы поглощения:</p>
+                <p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A V A Λ B = A</p></p>
+                <p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A Λ (A V B) = A</p></p>
+            </li>
+            <li>
+                <p>Закон контрапозиции (правило перевёртывания):</p>
+                <p>
+                    <p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A → B</p>
+                    <p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">=</p>
+                    <p style="text-decoration-line: overline; display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">B</p>
+                    <p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">→</p>
+                    <p style="text-decoration-line: overline; display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A</p>
+                </p>
+                <p>
+                    <p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A → B</p>
+                    <p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">=</p>
+                    <p style="text-decoration-line: overline; display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A</p>
+                    <p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">V</p>
+                    <p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">B</p>
+                </p>
+                <p>
+                <p style="text-decoration-line: overline; display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A → B</p>
+                <p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">=</p>
+                <p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">B</p>
+                <p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">Λ</p>
+                <p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A</p>
+                </p>
+                <p><p style="display:inline-block; margin-left: 5px;  margin-bottom: 0.8vh; margin-top: 0.8vh">A ↔ B = (A → B) Λ (B → A)</p></p>
+            </li>
+        </ol>
+    </div>
+    <a style='font-size:72px' class='fas arrow right' id="arrow-right" href="index.html"><img class='right' src="/img/right.png" alt="правая стрелочка на следующую страницу"></a>
+</div>
+</body>
+</html>
